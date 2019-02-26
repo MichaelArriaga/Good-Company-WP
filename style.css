@@ -1,0 +1,781 @@
+/*
+Theme Name: Good Company
+Theme URI: 
+Author: Mike Arriaga
+Author URI: https://ekim.me/
+Description: That's right, this is the custom theme that we created for our own company website! Feel free to customize and make it your own!
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #6C63FF;
+  --container-large: 1280px;
+  --container-medium: 920px;
+  --container-small: 768px;
+  --container-mobile: 320px;
+  --primary-type: 'Roboto Slab', serif;
+  --secondary-type: 'Open Sans', sans-serif;
+  --font-size-heading-large: 40px;
+  --font-size-subheading-large: 16px;
+  --font-size-heading-small: 24px;
+  --font-size-subheading-small: 16px;
+}
+
+.purple {
+  color: var(--primary-color);
+}
+
+ul, li {
+  list-style: none;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  /* background: lightgray; */
+}
+
+/* NAVBAR START */
+
+.navbar {
+  max-width: var(--container-large);
+  margin: auto;
+  font-family: var(--secondary-type);
+  font-weight: 700;
+  height: 70px;
+  line-height: 70px;
+}
+
+.menu {
+  margin: 0 40px;
+  float: right;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  margin: 0 10px;
+  line-height: 70px;
+  padding: 0 15px;
+}
+
+.navbar label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+  width: 26px;
+  float: right;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked+.menu {
+  margin-bottom: 40px;
+}
+
+/* NAVBAR END */
+
+/* HERO SECTION START */
+
+.hero--container {
+  max-width: var(--container-large);
+  margin: auto;
+  display: flex;
+  align-content: space-between;
+  width: 100%;
+  margin-top: 100px;
+  padding: 0 40px;
+}
+
+.hero--container-left {
+  text-align: left;
+  margin: 0 0px;
+  flex: 1;
+  height: 500px;
+}
+
+.hero--container-right {
+  margin: 0 40px;
+  flex: 2;
+  height: 500px;
+}
+
+.hero--image {
+  width: 100%;
+  padding-top: 40px;
+}
+
+.hero--heading {
+  font-size: var(--font-size-heading-large);
+  font-family: var(--primary-type);
+  line-height: 62px;
+}
+
+.hero--subheading {
+  font-size: var(--font-size-subheading-large);
+  font-family: var(--secondary-type);
+  line-height: 30px;
+}
+
+/* HERO SECTION END */
+
+/* FEATURE SECTION START */
+
+.feature--container {
+  max-width: var(--container-large);
+  margin: auto;
+  margin-top: 60px;
+  display: flex;
+  align-items: space-between;
+  padding: 0 40px;
+}
+
+.feature--item {
+  font-family: var(--secondary-type);
+  max-width: 30%;
+  margin: 0 20px;
+}
+
+.feature--item-image {
+  margin-left: -8px;
+}
+
+.feature--item-heading {
+  font-size: 18px;
+}
+
+.feature--item-content {
+  font-size: var(--font-size-subheading-large);
+  line-height: 26px
+}
+
+/* FEATURE SECTION END */
+
+/* TESTIMONIAL SECTION START */
+
+.testimonial--container-outer {
+  width: 100%;
+  background: var(--primary-color);
+  margin-top: 150px;
+}
+
+.testimonial--heading {
+  font-family: var(--primary-type);
+  font-size: var(--font-size-heading-large);
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+  flex-basis: 100%;
+}
+
+.testimonial--container {
+  max-width: var(--container-large);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 40px;
+}
+
+.testimonial--item {
+  background: white;
+  width: 350px;
+  height: 320px;
+  padding: 20px;
+  display: inline-block;
+  margin: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.testimonial--info {
+  width: 58%;
+  display: inline-block;
+  margin-bottom: 40px;
+  vertical-align: middle;
+}
+
+.testimonial--name {
+  font-family: var(--secondary-type);
+  font-size: 33.5px;
+}
+
+.testimonial--avatar {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 40%;
+}
+
+.avatar--circle {
+  background: var(--primary-color);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.testimonial--avatar img {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  right: 26px;
+}
+
+.testimonial--location {
+  font-family: var(--secondary-type);
+  font-weight: 400;
+  font-size: var(--font-size-subheading-large);
+}
+
+.testimonial--content {
+  font-family: var(--secondary-type);
+  font-size: var(--font-size-subheading-large);
+  line-height: 26px;
+  max-height: 200px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+/* TESTIMONIAL SECTION END */
+
+/* CONTACT SECTION START */
+
+.contact--header-container {
+  /* width: 550px; */
+  text-align: center;
+  margin: 80px auto;
+}
+
+.contact--header {
+  font-family: var(--primary-type);
+}
+
+.contact--content {
+  font-family: var(--secondary-type);
+  font-weight: 400;
+  line-height: 30px;
+  max-width: 480px;
+  margin: auto;
+}
+
+/* cform--form */
+
+.wpcf7-form {
+  width: 100%;
+}
+
+.cform--container {
+  width: 690px;
+  height: auto;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  padding: 40px 40px 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 160px;
+}
+
+.cform--heading {
+  font-size: 30px;
+  font-family: var(--primary-type);
+  margin-bottom: 30px;
+  flex-basis: 100%;
+}
+
+label {
+  display: block;
+}
+
+/* field--header */
+
+.wpcf7-form label {
+  font-size: 16px;
+  font-family: var(--secondary-type);
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  font-size: 18px;
+  font-family: var(--secondary-type);
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.cform--container input {
+  border-radius: 2px;
+  border-style: solid;
+  border-color: #C5C5C5;
+  border-width: 1px;
+  height: 50px;
+  width: 260px;
+}
+
+.textarea {
+  width: 100%;
+  height: 200px;
+}
+
+.field {
+  /* background: pink; */
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+
+.half {
+  display: inline-block;
+  height: 65px;
+}
+
+.wpcf7-submit {
+  color: white;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.cform--submit-btn:focus {
+  outline: none;
+}
+
+.cform--call {
+  font-family: var(--secondary-type);
+  flex-basis: 100%;
+  padding: 20px 0;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+/* CONTACT SECTION END */
+
+/* FOOTER SECTION START */
+
+.footer {
+  margin-bottom: 40px;
+}
+
+.footer h1 {
+  font-family: var(--primary-type);
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer--highlight {
+  color: var(--primary-color);
+}
+
+/* FOOTER SECTION END */
+
+@media only screen and (max-width: 1280px) {
+  /* HERO SECTION START */
+  .hero--container {
+    max-width: var(--container-medium);
+    align-content: space-between;
+  }
+  .hero--container-left {
+    flex: 1;
+  }
+  .hero--container-right {
+    flex: 1;
+  }
+  /* HERO SECTION END */
+  /* FEATURE SECTION START */
+  .feature--container {
+    max-width: var(--container-medium);
+  }
+  .feature--item-heading {
+    font-size: var(--font-size-subheading-small);
+  }
+  .feature--item-content {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  /* FEATURE SECTION END */
+  /* TESTIMONIAL SECTION START */
+  .testimonial--container {
+    display: block;
+  }
+  .testimonial--item {
+    display: block;
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    margin-bottom: 40px;
+    padding: 40px;
+  }
+  .testimonial--info {
+    height: 150px;
+    width: 50%;
+    margin-bottom: 0;
+    vertical-align: middle;
+    margin-bottom: 60px;
+  }
+  .testimonial--name {
+    font-size: 40px;
+  }
+  .testimonial--location {
+    font-size: 20px;
+  }
+  .testimonial--avatar {
+    width: 49%;
+    height: 150px;
+    vertical-align: middle;
+    margin-bottom: 60px;
+  }
+  .avatar--circle {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .testimonial--avatar img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    right: -10;
+  }
+  .testimonial--content {
+    font-size: 18px;
+    line-height: 38px;
+    padding: 0 20px;
+  }
+  /* TESTIMONIAL SECTION END */
+}
+
+@media only screen and (max-width: 920px) {
+  /* HERO SECTION START */
+  .hero--container {
+    max-width: var(--container-medium);
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 60px;
+    padding: 0 40px;
+    flex: 1 1;
+  }
+  .hero--container-left {
+    flex-basis: 100%;
+    height: auto;
+  }
+  .hero--container-right {
+    flex: 0;
+    flex-basis: 100%;
+    height: auto;
+    margin: auto 40px;
+    text-align: center;
+  }
+  .hero--image {
+    width: 90%;
+    padding-top: 40px;
+  }
+  .hero--heading {
+    text-align: center;
+  }
+  .hero--subheading {
+    width: 75%;
+    text-align: center;
+    margin: auto;
+  }
+  /* HERO SECTION END */
+  /* FEATURE SECTION START */
+  .feature--container {
+    max-width: var(--container-medium);
+    flex-direction: column;
+  }
+  .feature--item {
+    margin: 40px auto;
+    /* background: grey; */
+    max-width: 90%;
+    text-align: center;
+  }
+  .feature--item-heading {
+    font-size: 22px;
+  }
+  .feature--item-content {
+    font-size: var(--font-size-subheading-small);
+    max-width: 75%;
+    margin: auto;
+    text-align: center;
+  }
+  /* FEATURE SECTION END */
+  /* TESTIMONIAL SECTION START */
+  .testimonial--container-outer {}
+  .testimonial--container {
+    padding: 20px;
+  }
+  .testimonial--heading {
+    font-size: 30px;
+  }
+  .testimonial--item {
+    width: 440px;
+    height: 350px;
+    padding: 20px;
+  }
+  .testimonial--info {
+    margin-bottom: 20px;
+  }
+  .testimonial--name {
+    font-size: 30px;
+  }
+  .testimonial--location {
+    font-size: 16px;
+  }
+  .testimonial--avatar {
+    margin-bottom: 20px;
+  }
+  .avatar--circle {
+    width: 125px;
+    height: 125px;
+  }
+  .testimonial--avatar img {
+    width: 125px;
+    height: 125px;
+  }
+  .testimonial--content {
+    font-size: 18px;
+  }
+  /* TESTIMONIAL SECTION END */
+  /* CONTACT SECTION START */
+  .contact--header-container {}
+  .contact--header {
+    text-align: center;
+  }
+  .contact--content {
+    text-align: center;
+    max-width: 75%;
+  }
+  .cform--form {}
+  .cform--container {
+    max-width: 500px;
+    border-radius: 2px;
+    box-shadow: none;
+  }
+  .cform--heading {
+    margin-top: 0;
+  }
+  label {
+    font-weight: 700;
+  }
+  .field--header {
+    font-size: 14px;
+  }
+  input, textarea {}
+  .cform--container input {}
+  .textarea {}
+  .field {
+    margin-bottom: 40px;
+  }
+  .half {}
+  .cform--submit-btn {}
+  .cform--submit-btn:focus {}
+  .cform--call {}
+  /* CONTACT SECTION END */
+}
+
+@media only screen and (max-width: 500px) {
+  /* NAVBAR START */
+  .navbar label {
+    display: block;
+    cursor: pointer;
+  }
+  .menu {
+    text-align: center;
+    width: 100%;
+    display: none;
+    margin: auto;
+  }
+  .menu a {
+    display: block;
+    border-bottom: 1px solid #EAEAEB;
+    margin: 0;
+  }
+  #toggle:checked+.menu {
+    display: block;
+  }
+  /* NAVBAR END */
+  /* HERO SECTION START */
+  .hero--container {
+    max-width: var(--container-mobile);
+    flex-wrap: wrap;
+    padding: 0 10px;
+    width: 100%;
+    margin-top: 60px;
+    /* background: gray; */
+  }
+  .hero--container-left {
+    flex-basis: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+  .hero--container-right {
+    flex-basis: 100%;
+    height: auto;
+    margin: 0;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .hero--image {
+    width: 100%;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .hero--heading {
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+  .hero--subheading {
+    font-size: var(--font-size-subheading-large);
+    line-height: 26px;
+    width: 100%;
+  }
+  /* HERO SECTION END */
+  /* FEATURE SECTION START */
+  .feature--container {
+    max-width: 100%;
+    border-radius: 2px;
+    box-shadow: none;
+    padding: 20px 20px 0 20px;
+    margin-top: 30px;
+  }
+  .feature--item {
+    margin: 20px auto;
+  }
+  .feature--item-image {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 15px;
+  }
+  .feature--item-heading {
+    font-size: 18px;
+    max-width: 75%;
+    margin: auto;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  .feature--item-content {
+    font-size: 16px;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  /* FEATURE SECTION END */
+  /* TESTIMONIAL SECTION START */
+  .testimonial--container-outer {}
+  .testimonial--container {
+    padding: 20px 10px;
+  }
+  .testimonial--heading {
+    font-size: 22px;
+  }
+  .testimonial--item {
+    width: 280px;
+    height: 250px;
+  }
+  .testimonial--info {
+    height: 75px;
+    margin-bottom: 20px;
+  }
+  .testimonial--name {
+    font-size: 18px;
+  }
+  .testimonial--location {
+    font-size: 16px;
+  }
+  .testimonial--avatar {
+    width: 48%;
+    height: 75px;
+    margin-bottom: 20px;
+  }
+  .avatar--circle {
+    width: 75px;
+    height: 75px;
+  }
+  .testimonial--avatar img {
+    width: 75px;
+    height: 75px;
+  }
+  .testimonial--content {
+    font-size: 13px;
+    padding: 0;
+    line-height: 28px;
+    margin-top: 25px;
+  }
+  /* TESTIMONIAL SECTION END */
+  /* CONTACT SECTION START */
+  .contact--header-container {
+    padding: 20px;
+    margin: 40px auto;
+  }
+  .contact--header {
+    text-align: center;
+  }
+  .contact--content {
+    text-align: center;
+    max-width: 90%;
+  }
+  .cform--form {}
+  .cform--container {
+    max-width: 100%;
+    width: 300px;
+    border-radius: 2px;
+    box-shadow: none;
+    padding: 5px;
+  }
+  .cform--heading {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+  .wpcf7-form label {
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .field--header {
+    font-size: 13px;
+  }
+  input, textarea {
+    width: 280px;
+  }
+  .cform--container input {}
+  .textarea {}
+  .field {
+    margin-bottom: 20px;
+  }
+  .half {}
+  .cform--submit-btn {
+    max-width: 150px;
+    margin-top: -20px;
+  }
+  .cform--submit-btn:focus {}
+  .cform--call {
+    font-size: 16px;
+  }
+  /* CONTACT SECTION END */
+  /* FOOTER SECTION START */
+  .footer h1 {
+    font-size: 16px;
+  }
+  /* FOOTER SECTION END */
+}
